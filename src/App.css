@@ -3574,3 +3574,544 @@ a {
   .tm-tech-icon--large { width: 35px; height: 35px; }
   .tm-case-tech-item { min-height: 105px; }
 }
+
+/* ==========================================
+   TM PORTFOLIO — MOBILE REFINEMENT
+   ========================================== */
+
+.mobile-nav-number,
+.mobile-nav-arrow {
+  display: none;
+}
+
+@media (max-width: 650px) {
+
+  /* HEADER */
+
+  html {
+    scroll-padding-top: 78px;
+  }
+
+  .site-header {
+    min-height: 76px;
+    height: 76px;
+    padding: 12px 5%;
+    gap: 10px;
+    z-index: 1000;
+  }
+
+  .brand {
+    gap: 10px;
+    min-width: 0;
+  }
+
+  .brand-mark {
+    font-size: 29px;
+    letter-spacing: -3px;
+  }
+
+  .brand-info {
+    gap: 4px;
+  }
+
+  .brand-info strong {
+    font-size: 10px;
+    letter-spacing: .025em;
+  }
+
+  .brand-info small {
+    font-size: 6px;
+    letter-spacing: .025em;
+  }
+
+  .header-actions {
+    gap: 10px;
+    margin-left: auto;
+    flex-shrink: 0;
+  }
+
+  .language-switch {
+    padding: 3px;
+  }
+
+  .language-switch button {
+    padding: 8px;
+    font-size: 10px;
+  }
+
+  .menu-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 35px;
+    height: 40px;
+    padding: 0;
+    position: relative;
+    z-index: 1002;
+  }
+
+  /* MOBILE NAVIGATION */
+
+  .main-nav {
+    display: flex;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 1001;
+
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+
+    padding: 22px 6% 34px;
+
+    background: #191b1b;
+    border-top: 1px solid #353b36;
+    border-bottom: 1px solid #4a554b;
+
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-12px);
+    pointer-events: none;
+
+    transition:
+      opacity .25s ease,
+      transform .25s ease,
+      visibility .25s ease;
+
+    box-shadow: 0 25px 35px rgba(0,0,0,.25);
+  }
+
+  .main-nav.is-open {
+    display: flex;
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+
+  .main-nav a {
+    display: flex;
+    align-items: center;
+    gap: 17px;
+
+    width: 100%;
+    padding: 18px 0;
+
+    border-bottom: 1px solid #363c38;
+    color: #f3f1ed;
+
+    font-size: 23px;
+    font-weight: 700;
+    letter-spacing: -.035em;
+  }
+
+  .main-nav a::after {
+    display: none;
+  }
+
+  .mobile-nav-number {
+    display: inline-block;
+    min-width: 24px;
+    color: #a9b6aa;
+    font: 10px 'Space Mono', monospace;
+    letter-spacing: 0;
+  }
+
+  .mobile-nav-arrow {
+    display: block;
+    margin-left: auto;
+    color: #a9b6aa;
+  }
+
+  /* HERO — IMAGE ABOVE, CONTENT BELOW */
+
+  .portfolio-hero {
+    min-height: 0;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    background: #191b1b;
+  }
+
+  .hero-background {
+    inset: 0 0 auto;
+    height: 380px;
+
+    background-size: cover;
+    background-position: center 28%;
+
+    transform: none;
+  }
+
+  .hero-overlay {
+    background:
+      linear-gradient(
+        to bottom,
+        rgba(25,27,27,.08) 0%,
+        rgba(25,27,27,.08) 25%,
+        rgba(25,27,27,.48) 45%,
+        #191b1b 380px,
+        #191b1b 100%
+      );
+  }
+
+  .hero-grid {
+    opacity: .35;
+  }
+
+  .hero-topline {
+    width: 90%;
+    padding-top: 20px;
+    padding-bottom: 0;
+    font-size: 8px;
+  }
+
+  .hero-topline span:last-child {
+    max-width: 48%;
+    text-align: right;
+  }
+
+  .hero-inner {
+    width: 90%;
+    flex: none;
+    min-height: 0;
+    margin: 0 auto;
+
+    display: flex;
+    align-items: flex-start;
+
+    padding: 325px 0 45px;
+  }
+
+  .hero-copy {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .hero-intro {
+    margin-bottom: 20px;
+    font-size: 9px;
+    line-height: 1.6;
+  }
+
+  .intro-line {
+    width: 25px;
+    flex-shrink: 0;
+  }
+
+  .hero-copy h1 {
+    font-size: clamp(43px, 12.1vw, 70px);
+    line-height: .99;
+    letter-spacing: -.075em;
+  }
+
+  .hero-copy h1 span {
+    white-space: nowrap;
+  }
+
+  .hero-copy > p {
+    max-width: 100%;
+    margin-top: 25px;
+    font-size: 15px;
+    line-height: 1.65;
+  }
+
+  .hero-buttons {
+    margin-top: 26px;
+    gap: 15px;
+  }
+
+  .hero-button-primary {
+    padding: 16px 18px;
+    font-size: 11px;
+  }
+
+  .hero-button-secondary {
+    padding: 13px 0;
+    font-size: 11px;
+  }
+
+  .hero-terminal {
+    margin-top: 25px;
+    max-width: 100%;
+    font-size: 10px;
+  }
+
+  .hero-bottomline {
+    width: 90%;
+    padding: 17px 0 20px;
+    font-size: 8px;
+  }
+
+  /* SECTION SPACING */
+
+  .section-heading {
+    padding: 60px 0 42px;
+  }
+
+  .section-heading-grid {
+    margin-top: 26px;
+    gap: 20px;
+  }
+
+  .section-heading-grid h2 {
+    font-size: clamp(51px, 12vw, 75px);
+  }
+
+  .section-heading-grid p {
+    font-size: 15px;
+    line-height: 1.65;
+  }
+
+  /* PROJECT HEADER */
+
+  .project-topline {
+    grid-template-columns: 55px minmax(0, 1fr);
+    gap: 12px;
+    padding: 16px 5%;
+    font-size: 9px;
+  }
+
+  .project-topline span:nth-child(2) {
+    text-align: right;
+    line-height: 1.5;
+  }
+
+  /* PROJECT PREVIEW */
+
+  .project-stage {
+    min-height: 0;
+    height: auto;
+    aspect-ratio: 1.48 / 1;
+
+    padding: 30px 4% 35px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .stage-corner {
+    top: 12px;
+    left: 5%;
+    font-size: 8px;
+  }
+
+  .preview-desktop {
+    width: 100%;
+    max-width: 100%;
+    margin-top: 0;
+
+    border-width: 5px;
+    border-radius: 11px;
+  }
+
+  .preview-desktop-bar {
+    height: 28px;
+    min-height: 28px;
+    padding: 0 10px;
+    font-size: 8px;
+  }
+
+  .preview-desktop-screen {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+  }
+
+  /* The small floating phone made the mobile
+     presentation crowded and covered the site. */
+
+  .project-stage .preview-phone {
+    display: none;
+  }
+
+  .preview-stage-label {
+    bottom: 11px;
+    left: 5%;
+    right: 5%;
+    font-size: 7px;
+  }
+
+  /* PROJECT DESCRIPTION */
+
+  .project-description {
+    width: 90%;
+    padding: 38px 0 55px;
+    gap: 25px;
+    align-items: stretch;
+  }
+
+  .eyebrow {
+    font-size: 10px;
+  }
+
+  .project-description h3 {
+    margin: 17px 0 18px;
+    font-size: clamp(37px, 10.2vw, 60px);
+    line-height: 1.02;
+    letter-spacing: -.07em;
+    overflow-wrap: anywhere;
+  }
+
+  .project-description p {
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  .tm-project-tech {
+    margin-top: 20px;
+    gap: 8px;
+  }
+
+  .tm-project-tech > span {
+    padding: 8px 10px;
+    gap: 7px;
+    font-size: 10px;
+  }
+
+  .project-actions {
+    width: 100%;
+    gap: 12px;
+    align-items: stretch;
+  }
+
+  .text-action {
+    width: 100%;
+    padding: 16px 0;
+    font-size: 12px;
+    justify-content: space-between;
+  }
+
+  /* EXPANDED PROJECT DETAILS */
+
+  .tm-expanded-project {
+    width: 90%;
+    margin-bottom: 65px;
+  }
+
+  .tm-case-summary {
+    grid-template-columns: 1fr;
+    gap: 22px;
+    padding: 30px 0;
+  }
+
+  .tm-role-panel {
+    padding: 23px;
+  }
+
+  .tm-case-tech,
+  .tm-case-features,
+  .tm-case-original {
+    padding: 32px 0;
+  }
+
+  .tm-case-tech-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 9px;
+  }
+
+  .tm-case-tech-item {
+    min-height: 110px;
+  }
+
+  .tm-case-process {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    margin-bottom: 30px;
+  }
+
+  .tm-case-process-card {
+    padding: 24px;
+  }
+
+  .tm-features-list > div {
+    gap: 12px;
+    padding: 17px 0;
+  }
+
+  .tm-features-list > div > strong {
+    font-size: 13px;
+    line-height: 1.5;
+  }
+
+  .tm-project-bottom {
+    flex-direction: column;
+  }
+
+  .tm-rsvp-alert {
+    width: 90%;
+    margin: -10px auto 45px;
+    padding: 18px;
+    gap: 12px;
+  }
+
+  .tm-rsvp-alert p {
+    font-size: 13px;
+  }
+
+  /* SMALLER SPACING IN OTHER SECTIONS */
+
+  .skills-section {
+    padding: 65px 0;
+  }
+
+  .skills-heading {
+    padding: 35px 0;
+  }
+
+  .skill-card {
+    min-height: 0;
+    padding: 26px;
+  }
+
+  .about-section {
+    padding-top: 65px;
+    padding-bottom: 75px;
+  }
+
+  .about-layout {
+    gap: 45px;
+  }
+
+  .contact-section {
+    padding-top: 60px;
+  }
+
+}
+
+/* VERY SMALL PHONES */
+
+@media (max-width: 380px) {
+
+  .brand-info small {
+    font-size: 5.5px;
+  }
+
+  .brand-mark {
+    font-size: 26px;
+  }
+
+  .language-switch button {
+    padding: 7px;
+  }
+
+  .hero-background {
+    height: 340px;
+  }
+
+  .hero-inner {
+    padding-top: 295px;
+  }
+
+  .hero-copy h1 {
+    font-size: 11.6vw;
+  }
+
+  .project-description h3 {
+    font-size: 9.8vw;
+  }
+
+}

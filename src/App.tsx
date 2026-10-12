@@ -570,89 +570,83 @@ function LivePhone({ project }: { project: Project }) {
 
 }
 
+
 function ProjectPreview({ project }: { project: Project }) {
-
   const { ref, width } = useElementWidth(1100)
-
   const scale = width / 1280
+  const isMobileProject = project.id === 'wedding'
+
+  if (isMobileProject) {
+    return (
+      <div className="project-stage project-stage--wedding project-stage--mobile-first">
+        <span className="stage-corner">TM / MOBILE EXPERIENCE</span>
+
+        <div className="mobile-first-layout">
+          <div className="mobile-first-copy">
+            <span className="mobile-first-kicker">
+              04 / INTERACTIVE EXPERIENCE
+            </span>
+            <strong>AN INVITATION, REIMAGINED.</strong>
+            <span>DESIGNED FOR THE SMALL SCREEN.</span>
+          </div>
+
+          <LivePhone project={project} />
+        </div>
+
+        <div className="preview-stage-label">
+          <span>MOBILE-FIRST DESIGN</span>
+          <span>TM. DIGITAL PRACTICE</span>
+        </div>
+      </div>
+    )
+  }
 
   return (
-
     <div className={`project-stage project-stage--${project.id}`}>
-
       <span className="stage-corner">TM / PROJECT PREVIEW</span>
 
       <div className="preview-desktop">
-
         <div className="preview-desktop-bar">
-
           <span className="preview-dots">
-
             <i />
-
             <i />
-
             <i />
-
           </span>
 
           <span className="preview-address">
-
             {project.url.replace('https://', '')}
-
           </span>
 
           <ExternalLink size={14} />
-
         </div>
 
         <div className="preview-desktop-screen" ref={ref}>
-
           <iframe
-
             title={`${project.name} desktop preview`}
-
             src={project.url}
-
             loading="lazy"
-
             scrolling="no"
-
             tabIndex={-1}
-
             style={{
-
               width: 1280,
-
               height: 720,
-
               transform: `scale(${scale})`,
-
               transformOrigin: 'top left'
-
             }}
-
           />
-
         </div>
-
       </div>
 
       <LivePhone project={project} />
 
       <div className="preview-stage-label">
-
         <span>DESKTOP / MOBILE PREVIEW</span>
-
         <span>TM. DIGITAL PRACTICE</span>
-
       </div>
-
     </div>
-
   )
-
 }
+
 
 function ProjectSection({
 

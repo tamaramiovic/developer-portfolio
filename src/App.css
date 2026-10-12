@@ -4338,3 +4338,506 @@ a {
     max-width: 100%;
   }
 
+
+/* =========================================
+   TM PORTFOLIO — IT FIRST MOBILE HERO
+   ========================================= */
+
+@media (max-width: 650px) {
+
+  .portfolio-hero {
+    position: relative;
+    min-height: calc(100svh - 75px);
+    height: auto;
+    padding: 0;
+    background: #191b1b;
+    overflow: hidden;
+    isolation: isolate;
+  }
+
+  /* Portrait becomes part of the composition */
+  .hero-background {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('/images/hero-tamara.png');
+    background-size: auto 75%;
+    background-position: 67% top;
+    background-repeat: no-repeat;
+    opacity: .48;
+    z-index: -3;
+  }
+
+  /* Dark editorial treatment */
+  .hero-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: -2;
+    background:
+      linear-gradient(
+        180deg,
+        rgba(25,27,27,.20) 0%,
+        rgba(25,27,27,.40) 22%,
+        rgba(25,27,27,.88) 48%,
+        #191b1b 78%
+      );
+  }
+
+  .hero-grid {
+    z-index: -1;
+    opacity: .85;
+    mask-image: none;
+    background-size: 52px 52px;
+  }
+
+  .hero-topline {
+    width: 90%;
+    padding-top: 22px;
+    padding-bottom: 12px;
+    font-size: 8px;
+  }
+
+  .hero-inner {
+    width: 90%;
+    min-height: 0;
+    margin: 0 auto;
+    padding: 72px 0 38px;
+    flex: 1;
+    display: flex;
+    align-items: center;
+  }
+
+  .hero-copy {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .hero-intro {
+    margin-bottom: 22px;
+    font-size: 9px;
+    color: #c5d3c6;
+  }
+
+  .hero-copy h1 {
+    margin: 0;
+    font-size: clamp(44px, 12vw, 72px);
+    line-height: .98;
+    letter-spacing: -.075em;
+    text-shadow: 0 3px 30px rgba(0,0,0,.25);
+  }
+
+  .hero-copy > p {
+    max-width: 340px;
+    margin-top: 25px;
+    font-size: 14px;
+    line-height: 1.7;
+    color: #e0e5df;
+  }
+
+  .hero-buttons {
+    margin-top: 25px;
+    gap: 12px;
+  }
+
+  .hero-button-primary {
+    padding: 15px 17px;
+  }
+
+  .hero-button-secondary {
+    padding: 14px 0;
+  }
+
+  .hero-terminal {
+    margin-top: 25px;
+    font-size: 10px;
+  }
+
+  .hero-bottomline {
+    width: 90%;
+    padding-top: 15px;
+    padding-bottom: 20px;
+  }
+}
+
+@media (max-width: 380px) {
+  .hero-inner {
+    padding-top: 50px;
+  }
+
+  .hero-copy h1 {
+    font-size: 11.6vw;
+  }
+
+  .hero-background {
+    background-size: auto 68%;
+  }
+}
+
+/* ============================================
+   TM PORTFOLIO — MOBILE DESIGN FIX
+   ============================================ */
+
+@media (max-width: 650px) {
+
+  /* HERO — IT FIRST */
+
+  .portfolio-hero {
+    position: relative;
+    min-height: calc(100svh - 76px);
+    height: auto;
+    padding: 0;
+    background: #191b1b;
+    overflow: hidden;
+    isolation: isolate;
+  }
+
+  .hero-background {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('/images/hero-tamara.png');
+    background-size: auto 65%;
+    background-position: 75% 0;
+    background-repeat: no-repeat;
+    opacity: .32;
+    transform: none;
+    z-index: -3;
+  }
+
+  .hero-overlay {
+    position: absolute;
+    inset: 0;
+    background:
+      linear-gradient(
+        90deg,
+        rgba(25,27,27,.45) 0%,
+        rgba(25,27,27,.15) 100%
+      ),
+      linear-gradient(
+        180deg,
+        rgba(25,27,27,.1) 0%,
+        rgba(25,27,27,.35) 25%,
+        rgba(25,27,27,.9) 60%,
+        #191b1b 85%
+      );
+    z-index: -2;
+  }
+
+  .hero-grid {
+    opacity: .8;
+    mask-image: none;
+    background-size: 48px 48px;
+    z-index: -1;
+  }
+
+  .hero-topline {
+    width: 90%;
+    padding: 20px 0 0;
+    font-size: 8px;
+    line-height: 1.5;
+  }
+
+  .hero-topline span:last-child {
+    max-width: 48%;
+    text-align: right;
+  }
+
+  .hero-inner {
+    width: 90%;
+    min-height: 0;
+    flex: 1;
+    margin: 0 auto;
+    padding: 65px 0 48px;
+    display: flex;
+    align-items: center;
+  }
+
+  .hero-copy {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .hero-intro {
+    margin-bottom: 24px;
+    color: #c5d3c6;
+    font-size: 9px;
+    line-height: 1.6;
+  }
+
+  .hero-copy h1 {
+    margin: 0;
+    font-size: clamp(43px, 11.7vw, 68px);
+    line-height: .98;
+    letter-spacing: -.075em;
+    text-shadow: 0 8px 32px rgba(0,0,0,.25);
+  }
+
+  .hero-copy h1 span {
+    white-space: nowrap;
+  }
+
+  .hero-copy > p {
+    max-width: 330px;
+    margin-top: 24px;
+    font-size: 14px;
+    line-height: 1.65;
+    color: #dce2dc;
+  }
+
+  .hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 25px;
+  }
+
+  .hero-button-primary,
+  .hero-button-secondary {
+    min-height: 48px;
+    font-size: 10px;
+  }
+
+  .hero-button-primary {
+    padding: 15px 17px;
+  }
+
+  .hero-button-secondary {
+    padding: 14px 0;
+  }
+
+  .hero-terminal {
+    margin-top: 25px;
+    font-size: 10px;
+  }
+
+  .hero-bottomline {
+    width: 90%;
+    padding: 15px 0 20px;
+  }
+
+  /* PROJECTS — NO EMPTY STAGE */
+
+  .project-stage {
+    height: auto;
+    min-height: 0;
+    aspect-ratio: auto;
+    padding: 42px 4% 42px;
+  }
+
+  .preview-desktop {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    border-width: 5px;
+    border-radius: 13px;
+  }
+
+  .preview-desktop-bar {
+    height: 30px;
+    min-height: 30px;
+    padding: 0 10px;
+    font-size: 9px;
+  }
+
+  .preview-desktop-screen {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+  }
+
+  .project-stage:not(.project-stage--mobile-first)
+  .preview-phone {
+    display: none;
+  }
+
+  .stage-corner {
+    top: 12px;
+    font-size: 8px;
+  }
+
+  .preview-stage-label {
+    bottom: 12px;
+    font-size: 8px;
+  }
+
+  /* WEDDING — PHONE AS MAIN VISUAL */
+
+  .project-stage--mobile-first {
+    min-height: 510px;
+    padding: 50px 5% 45px;
+    background: #d8d3c9;
+  }
+
+  .mobile-first-layout {
+    width: 100%;
+    min-height: 415px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+  }
+
+  .mobile-first-copy {
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+    gap: 16px;
+    color: #272a27;
+  }
+
+  .mobile-first-kicker {
+    font: 8px 'Space Mono', monospace;
+    letter-spacing: .04em;
+    color: #6c796d;
+  }
+
+  .mobile-first-copy strong {
+    font-size: clamp(20px, 6vw, 32px);
+    line-height: 1.05;
+    letter-spacing: -.055em;
+  }
+
+  .mobile-first-copy > span:last-child {
+    font: 8px 'Space Mono', monospace;
+    line-height: 1.7;
+    color: #657064;
+  }
+
+  .project-stage--mobile-first .preview-phone {
+    position: relative;
+    display: block;
+    flex: none;
+    width: min(45%, 180px);
+    height: auto;
+    right: auto;
+    bottom: auto;
+    transform: rotate(0);
+    filter: drop-shadow(0 18px 20px rgba(0,0,0,.22));
+  }
+
+  .project-stage--mobile-first:hover .preview-phone {
+    transform: none;
+  }
+
+  .project-stage--mobile-first .preview-phone-frame {
+    border-width: 5px;
+    padding: 4px;
+    border-radius: 27px;
+  }
+
+  .project-stage--mobile-first .preview-phone-screen {
+    border-radius: 19px;
+  }
+
+  /* PROJECT INFORMATION */
+
+  .project-description {
+    width: 90%;
+    padding: 40px 0 60px;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 25px;
+  }
+
+  .project-description h3 {
+    margin: 17px 0;
+    font-size: clamp(37px, 9.5vw, 60px);
+    line-height: 1;
+    overflow-wrap: anywhere;
+  }
+
+  .project-description p {
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  .project-actions {
+    width: 100%;
+    align-items: stretch;
+    gap: 10px;
+  }
+
+  .text-action {
+    width: 100%;
+    max-width: 100%;
+    justify-content: space-between;
+    padding: 15px 0;
+  }
+
+  .portfolio-hero,
+  .project-stage,
+  .project-description {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 380px) {
+  .hero-copy h1 {
+    font-size: 11.2vw;
+  }
+
+  .hero-inner {
+    padding-top: 45px;
+  }
+
+  .mobile-first-copy strong {
+    font-size: 20px;
+  }
+
+  .project-stage--mobile-first .preview-phone {
+    width: 44%;
+  }
+}
+
+/* MOBILE HERO — CLEAN PHOTO COMPOSITION */
+
+@media (max-width: 650px) {
+  .portfolio-hero {
+    position: relative;
+    background: #191b1b;
+    overflow: hidden;
+  }
+
+  .hero-background {
+    position: absolute;
+    inset: 0;
+    background-image: url('/images/hero-tamara.png');
+    background-repeat: no-repeat;
+    background-size: auto 390px;
+    background-position: center 0;
+    transform: none;
+    opacity: 1;
+  }
+
+  .hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      to bottom,
+      rgba(25, 27, 27, 0.05) 0%,
+      rgba(25, 27, 27, 0.08) 23%,
+      rgba(25, 27, 27, 0.85) 43%,
+      #191b1b 56%,
+      #191b1b 100%
+    );
+  }
+
+  .hero-inner {
+    position: relative;
+    z-index: 2;
+    padding-top: 270px;
+    padding-bottom: 35px;
+  }
+
+  .hero-copy {
+    position: relative;
+    z-index: 3;
+  }
+
+  .hero-copy h1 {
+    font-size: clamp(44px, 11vw, 62px);
+    line-height: 0.98;
+  }
+}
+

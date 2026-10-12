@@ -4115,3 +4115,63 @@ a {
   }
 
 }
+
+/* =========================================
+   FINAL MOBILE REFINEMENTS
+   Desktop layout remains unchanged
+========================================= */
+
+@media (max-width: 700px) {
+
+  /* HERO */
+  .portfolio-hero {
+    min-height: auto;
+    height: auto;
+    padding-bottom: 48px;
+  }
+
+  .portfolio-hero .hero-content {
+    padding-bottom: 0;
+  }
+
+  /* PROJECT PREVIEWS */
+  .project-stage {
+    height: auto;
+    min-height: 0;
+    padding: 30px 4% 38px;
+  }
+
+  .preview-desktop {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .preview-phone {
+    display: none;
+  }
+
+  /* PROJECT DESCRIPTIONS */
+  .project-description {
+    padding-top: 48px;
+    padding-bottom: 62px;
+  }
+
+  .project-description h3 {
+    font-size: clamp(48px, 11vw, 72px);
+    line-height: 0.98;
+    overflow-wrap: anywhere;
+  }
+
+  /* BUTTONS */
+  .project-description a,
+  .project-description button {
+    max-width: 100%;
+  }
+
+  /* Prevent horizontal overflow */
+  .portfolio-hero,
+  .project-stage,
+  .project-description {
+    max-width: 100%;
+  }
+}

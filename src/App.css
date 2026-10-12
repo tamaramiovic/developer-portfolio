@@ -4116,23 +4116,186 @@ a {
 
 }
 
-/* =========================================
-   FINAL MOBILE REFINEMENTS
-   Desktop layout remains unchanged
-========================================= */
 
-@media (max-width: 700px) {
+/* ==========================================
+   TM PORTFOLIO — MOBILE FINAL FIX
+   ========================================== */
 
-  /* HERO */
+@media (max-width: 650px) {
+
+  /* HEADER AND MOBILE MENU */
+
+  .site-header {
+    position: sticky;
+    top: 0;
+    z-index: 9999;
+    overflow: visible;
+  }
+
+  .main-nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 10000;
+    display: flex;
+    flex-direction: column;
+    background: #191b1b;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transform: translateY(-10px);
+  }
+
+  .main-nav.is-open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateY(0);
+  }
+
+  /* HERO PHOTO AND CONTENT */
+
   .portfolio-hero {
-    min-height: auto;
+    min-height: 0;
     height: auto;
-    padding-bottom: 48px;
+    padding-bottom: 0;
+    background: #191b1b;
   }
 
-  .portfolio-hero .hero-content {
-    padding-bottom: 0;
+  .hero-background {
+    top: 0;
+    right: 0;
+    bottom: auto;
+    left: 0;
+    height: 370px;
+    background-size: cover;
+    background-position: center 28%;
   }
+
+  .hero-overlay {
+    background: linear-gradient(
+      to bottom,
+      rgba(25,27,27,.06) 0%,
+      rgba(25,27,27,.06) 210px,
+      rgba(25,27,27,.5) 310px,
+      #191b1b 390px,
+      #191b1b 100%
+    );
+  }
+
+  .hero-inner {
+    width: 90%;
+    min-height: 0;
+    margin: 0 auto;
+    padding: 320px 0 35px;
+    align-items: flex-start;
+  }
+
+  .hero-copy {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .hero-copy h1 {
+    font-size: clamp(42px, 11.7vw, 69px);
+    line-height: 1;
+    letter-spacing: -.075em;
+  }
+
+  .hero-copy > p {
+    margin-top: 22px;
+    font-size: 15px;
+    line-height: 1.65;
+  }
+
+  .hero-buttons {
+    display: flex;
+    align-items: stretch;
+    gap: 12px;
+    margin-top: 25px;
+  }
+
+  .hero-button-primary,
+  .hero-button-secondary {
+    min-height: 48px;
+  }
+
+  /* PROJECT PREVIEW */
+
+  .project-stage {
+    height: auto;
+    min-height: 0;
+    aspect-ratio: 1.48 / 1;
+    padding: 32px 4% 35px;
+  }
+
+  .preview-desktop {
+    width: 100%;
+    max-width: 100%;
+    margin-top: 0;
+  }
+
+  .project-stage .preview-phone {
+    display: none;
+  }
+
+  /* PROJECT TEXT */
+
+  .project-description {
+    width: 90%;
+    padding: 40px 0 58px;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 24px;
+  }
+
+  .project-description h3 {
+    font-size: clamp(39px, 10.2vw, 62px);
+    line-height: 1;
+    overflow-wrap: anywhere;
+  }
+
+  .project-description p {
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  .project-actions {
+    width: 100%;
+    align-items: stretch;
+    gap: 10px;
+  }
+
+  .text-action {
+    width: 100%;
+    max-width: 100%;
+    justify-content: space-between;
+    padding: 15px 0;
+  }
+
+}
+
+@media (max-width: 380px) {
+
+  .hero-background {
+    height: 335px;
+  }
+
+  .hero-inner {
+    padding-top: 290px;
+  }
+
+  .hero-copy h1 {
+    font-size: 11.4vw;
+  }
+
+  .project-description h3 {
+    font-size: 9.8vw;
+  }
+
+}
+
 
   /* PROJECT PREVIEWS */
   .project-stage {
@@ -4174,4 +4337,4 @@ a {
   .project-description {
     max-width: 100%;
   }
-}
+
